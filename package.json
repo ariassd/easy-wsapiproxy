@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ariassd/easy-easy-wsapiproxy.git"
+    "url": "git+https://github.com/ariassd/easy-wsapiproxy.git"
   },
-  "homepage": "https://github.com/ariassd/easy-easy-wsapiproxy"
+  "homepage": "https://github.com/ariassd/easy-wsapiproxy"
 }
