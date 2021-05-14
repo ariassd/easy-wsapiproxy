@@ -1,13 +1,14 @@
 {
   "name": "easy-wsapiproxy",
   "version": "0.1.0",
-  "description": "Easy map postman request to websocket request",
+  "description": "Easy map API request to websocket request",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "node ./bin/global.js"
   },
   "keywords": [
+    "api",
     "postman",
     "websocket",
     "documentation",
