@@ -51,6 +51,8 @@ easy-wsapiproxy <api-port>
 
 ```
 
+![](assets/sample.png)
+
 # Contributing
 If someone wants to add or improve something, I invite you to collaborate directly in this repository: [easy-wsapiproxy](https://github.com/ariassd/easy-wsapiproxy)
 
