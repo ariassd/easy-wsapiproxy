@@ -15,7 +15,7 @@ function init() {
 
     console.log(chalk.cyan(`GET: {host}:${port}/status`));
     app.get('/status', async (req, res) => {
-      res.send({
+      res.status(200).send({
         status: 'ok',
         date: new Date(),
       });
@@ -23,12 +23,20 @@ function init() {
 
     console.log(chalk.cyan(`POST: {host}:${port}`));
     app.post('/', async (req, res) => {
-      const wsParams = req.body;
-      const result = await callWSIO(wsParams);
-      res.send({
-        response: result,
-        _request: wsParams,
-      });
+      try {
+        const wsParams = req.body;
+        const result = await callWSIO(wsParams);
+        res.status(200).send({
+          response: result,
+          _request: wsParams,
+        });
+      } catch (ex) {
+        console.log(ex);
+        res.status(500).send({
+          response:
+            'OMG（/｡＼) An internal server error has been thrown! Look at the console for more information',
+        });
+      }
     });
 
     app.listen(port, 'localhost', () => {
@@ -42,8 +50,8 @@ function init() {
         const socket = io(wsParams.url, {
           // path: '/notes',
           reconnectionDelay: 1000,
-          reconnection: true,
-          reconnectionAttempts: 10,
+          reconnection: false,
+          reconnectionAttempts: 3,
           transports: ['websocket'],
           agent: false, // [2] Please don't set this to true
           upgrade: false,
