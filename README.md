@@ -9,7 +9,7 @@ Useful for development proposes, using this tool you can send socket.io requests
 ## Install
 
 ```npm
-npm install -g easy-wsapiproxy
+npm install -g easy-wsapiproxy@latest
 ```
 
 # Usage
