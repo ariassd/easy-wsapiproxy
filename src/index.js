@@ -28,7 +28,7 @@ function init() {
         const result = await callWSIO(wsParams);
         res.status(200).send({
           response: result,
-          _request: wsParams,
+          // _request: wsParams,
         });
       } catch (ex) {
         console.log(ex);

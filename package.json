@@ -1,6 +1,6 @@
 {
   "name": "easy-wsapiproxy",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Easy map API request to websocket request",
   "main": "index.js",
   "scripts": {
